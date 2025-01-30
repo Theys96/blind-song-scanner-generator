@@ -47,8 +47,10 @@ export function PlaylistInput({ onPlaylistLoad, onBack }: PlaylistInputProps) {
             <p className="mb-4 text-sm text-gray-600 text-justify">
               Enter a Spotify playlist URL to generate printable song tiles.
               The tiles will have the artist, title and year on one side.
-              On the other side, a QR code referring to the Spotify track which can be scanned using
-              the <a target="_blank" className="text-[#1DB954] font-bold hover:text-[#1ed760]" href="https://play.blindsongscanner.com">Blind Song Scanner</a> web app.
+              On the other side, a QR code referring to the Spotify track.
+            </p>
+            <p className="mb-4 text-sm text-gray-600">
+              Got here by accident? <a className="text-[#1DB954] font-bold hover:text-[#1ed760]" href="https://www.blindsongscanner.com">Read more here</a>.
             </p>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
