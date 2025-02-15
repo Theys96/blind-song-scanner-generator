@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import { ArrowLeft } from 'lucide-react';
 import { extractPlaylistId, fetchPlaylistTracks } from '../utils/spotify';
 import type { Song } from '../types';
-import cards from '../assets/cards.jpeg'
+import cards from '../assets/cards.jpeg';
 
 interface PlaylistInputProps {
   onPlaylistLoad: (songs: Song[]) => void;
-  onBack?: () => void;
 }
 
-export function PlaylistInput({ onPlaylistLoad, onBack }: PlaylistInputProps) {
+export function PlaylistInput({ onPlaylistLoad }: PlaylistInputProps) {
   const [playlistUrl, setPlaylistUrl] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -45,12 +43,19 @@ export function PlaylistInput({ onPlaylistLoad, onBack }: PlaylistInputProps) {
         <div className="mt-8">
           <div className="rounded-lg bg-white shadow-lg px-4 sm:px-6 py-3 sm:py-4">
             <p className="mb-4 text-sm text-gray-600 text-justify">
-              Enter a Spotify playlist URL to generate printable song tiles.
-              The tiles will have the artist, title and year on one side.
-              On the other side, a QR code referring to the Spotify track.
+              Enter a Spotify playlist URL to generate printable song tiles. The
+              tiles will have the artist, title and year on one side. On the
+              other side, a QR code referring to the Spotify track.
             </p>
             <p className="mb-4 text-sm text-gray-600">
-              Got here by accident? <a className="text-[#1DB954] font-bold hover:text-[#1ed760]" href="https://www.blindsongscanner.com">Read more here</a>.
+              Got here by accident?{' '}
+              <a
+                className="text-[#1DB954] font-bold hover:text-[#1ed760]"
+                href="https://www.blindsongscanner.com"
+              >
+                Read more here
+              </a>
+              .
             </p>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -71,7 +76,9 @@ export function PlaylistInput({ onPlaylistLoad, onBack }: PlaylistInputProps) {
                   />
                 </div>
                 {error && (
-                  <p className="mt-2 text-xs sm:text-sm text-red-600">{error}</p>
+                  <p className="mt-2 text-xs sm:text-sm text-red-600">
+                    {error}
+                  </p>
                 )}
               </div>
 
@@ -105,7 +112,7 @@ export function PlaylistInput({ onPlaylistLoad, onBack }: PlaylistInputProps) {
               </div>
             </div>
           </div>
-          
+
           <div className="mt-8">
             <img
               src={cards}
