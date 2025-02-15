@@ -79,11 +79,15 @@ function App() {
           <p className="text-sm sm:text-base text-gray-600 mt-1">Generator</p>
         </div>
         <div className="mb-4 text-xs sm:text-sm text-gray-500 bg-white rounded-lg shadow-lg p-3 sm:p-4">
-          Edit the song information below if necessary. Check especially
-          carefully that the year is correct. Click "Generate PDF" to create
-          printable song tiles. Each tile will be 6x6cm with the song
-          information on the front and a QR code on the back. Make sure to print
-          double-sided.
+          Edit the song information below if necessary.
+          <span className="font-bold text-red-800">
+            &nbsp;Check especially carefully that the year is correct!&nbsp;
+          </span>
+          Because the year is extracted from the song's album, mistakes easily
+          happen. <br />
+          Click "Generate PDF" to create printable song tiles. Each tile will be
+          6x6cm with the song information on the front and a QR code on the
+          back. Make sure to print double-sided.
         </div>
         <div className="bg-white rounded-lg shadow-lg p-3 sm:p-6">
           <div className="flex justify-between items-center mb-6">
