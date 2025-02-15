@@ -1,14 +1,14 @@
-import { SPOTIFY_API_BASE, SPOTIFY_TOKEN_SOURCE } from "../data/config.ts" ;
+import { SPOTIFY_API_BASE, SPOTIFY_TOKEN_SOURCE } from '../data/config.ts';
 
 export async function getSpotifyToken(): Promise<string> {
   const response = await fetch(`${SPOTIFY_TOKEN_SOURCE}`, {
     mode: 'cors',
     headers: {
-      'Accept': 'application/json'
-    }
+      Accept: 'application/json',
+    },
   });
   const data = await response.json();
-  console.log(data)
+  console.log(data);
   return data['token'];
 }
 
@@ -37,7 +37,7 @@ export async function fetchPlaylistTracks(playlistId: string): Promise<Song[]> {
       headers: {
         Authorization: `Bearer ${token}`,
       },
-    }
+    },
   );
 
   if (!response.ok) {
