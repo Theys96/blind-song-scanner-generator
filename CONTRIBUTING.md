@@ -1,26 +1,25 @@
 # Contribution Guide
 
-Vielen Dank für dein Interesse an einer Mitarbeit!
+Thank you for your interest in contributing!
 
 ## Pull Requests
-- Erstelle einen Feature-Branch (`feature/<beschreibung>` oder `fix/<beschreibung>`)
-- Schreibe verständlichen, dokumentierten Code
-- Führe vor jedem Commit `npm run lint` aus
-- Beschreibe im Pull Request die Motivation und die Änderungen
+- Create a feature branch (`feature/<description>` or `fix/<description>`)
+- Write clear, documented code
+- Run `npm run lint` before every commit
+- Describe the motivation and changes in the pull request
 
 ## Branching
-- Hauptentwicklung auf `main`
-- Feature-Branches für neue Features
-- Bugfix-Branches für Fehlerbehebungen
+- Main development on `main`
+- Feature branches for new features
+- Bugfix branches for fixing errors
 
-## Code-Reviews
-- Halte dich an den Style Guide (ESLint, Prettier)
-- Beantworte Rückfragen im Review
-- Überarbeite den Code bei Bedarf
+## Code Reviews
+- Follow the style guide (ESLint, Prettier)
+- Answer questions in the review
+- Revise the code if necessary
 
-## Kommunikation
-- Nutze Issues für Fehler, Feature-Wünsche und Fragen
-- Diskutiere größere Änderungen vorab per Issue
+## Communication
+- Use issues for bugs, feature requests, and questions
+- Discuss major changes in advance via issue
 
 ---
-
